@@ -1,0 +1,23 @@
+{
+  "name": "daily",
+  "version": "0.1.0",
+  "description": "Personal daily tools: TODO.md management (natural-language add/complete/delete/update) and spawn-remote (start another Codex/Claude session in a detached tmux over SSH for parallel remote work).",
+  "author": {
+    "name": "Wenhao Chai",
+    "url": "https://wenhaochai.com"
+  },
+  "homepage": "https://wenhaochai.com",
+  "repository": "https://github.com/wenhaochai/codex-plugins",
+  "license": "MIT",
+  "keywords": ["productivity", "todo", "daily", "ssh", "tmux"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Daily",
+    "shortDescription": "TODO and remote-session helpers",
+    "longDescription": "Personal daily tools for managing TODO.md via natural language and spawning sibling Codex/Claude sessions in detached tmux for parallel remote work. Ported from the corresponding Claude Code plugin at github.com/wenhaochai/claude-plugins.",
+    "developerName": "Wenhao Chai",
+    "category": "Productivity",
+    "websiteURL": "https://wenhaochai.com",
+    "brandColor": "#202124"
+  }
+}

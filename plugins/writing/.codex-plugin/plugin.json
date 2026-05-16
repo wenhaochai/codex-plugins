@@ -1,0 +1,23 @@
+{
+  "name": "writing",
+  "version": "0.1.0",
+  "description": "Publication-prep tools for academic and public-facing writing: style (17 canonical English-prose rules + 18 page-cap additions + 2 audit-time rules), plot (matplotlib templates for paper figures with Google-brand palette and Palatino body), review (pre-submission self-review of AI/ML paper Overleaf drafts simulating NeurIPS/ICML/ICLR reviewers), and paper-overleaf (Overleaf-synced LaTeX paper editing with red-mark workflow, bilingual zh/en review, claim-evidence audit).",
+  "author": {
+    "name": "Wenhao Chai",
+    "url": "https://wenhaochai.com"
+  },
+  "homepage": "https://wenhaochai.com",
+  "repository": "https://github.com/wenhaochai/codex-plugins",
+  "license": "MIT",
+  "keywords": ["writing", "academic", "latex", "paper", "matplotlib", "review"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Writing",
+    "shortDescription": "Style, plotting, paper review and editing",
+    "longDescription": "Tools for academic and public-facing writing. Ported from the corresponding Claude Code plugin at github.com/wenhaochai/claude-plugins. Note: paper-overleaf is tuned for Claude Opus and gpt-5.5 may underperform on long-form paper editing tasks.",
+    "developerName": "Wenhao Chai",
+    "category": "Productivity",
+    "websiteURL": "https://wenhaochai.com",
+    "brandColor": "#202124"
+  }
+}
