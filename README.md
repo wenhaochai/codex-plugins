@@ -1,12 +1,35 @@
 # Wenhao's Codex Plugins
 
-Personal marketplace of Codex plugins, ported from the corresponding Claude Code marketplace at [wenhaochai/claude-plugins](https://github.com/wenhaochai/claude-plugins).
+Personal collection of Codex skills, ported from the corresponding Claude Code marketplace at [wenhaochai/claude-plugins](https://github.com/wenhaochai/claude-plugins).
+
+The repo follows Codex's plugin/marketplace layout (`plugins/<plugin>/skills/<skill>/SKILL.md`) so skills are grouped logically and could be promoted to full plugins later (with MCP servers, hooks, apps). For now they install as plain Codex skills.
 
 ## Install
 
+The cleanest path is to ask Codex to install them via its built-in `skill-installer` skill — open `codex` and say:
+
+> Install the writing skills (style, plot, review, paper-overleaf) and daily skills (todo, spawn-remote) from `wenhaochai/codex-plugins`.
+
+Or do it directly with the install script:
+
 ```bash
-codex plugin marketplace add wenhaochai/codex-plugins
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo wenhaochai/codex-plugins \
+  --path plugins/daily/skills/todo plugins/daily/skills/spawn-remote \
+         plugins/writing/skills/style plugins/writing/skills/plot \
+         plugins/writing/skills/review plugins/writing/skills/paper-overleaf
 ```
+
+This copies each `SKILL.md` (plus assets) into `~/.codex/skills/<name>/`, where Codex auto-discovers them. Restart `codex` to pick up new skills.
+
+To pick only a subset, drop the corresponding `--path` entries. Example — just `plot`:
+
+```bash
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo wenhaochai/codex-plugins --path plugins/writing/skills/plot
+```
+
+> `codex plugin marketplace add wenhaochai/codex-plugins` will register the marketplace metadata but does **not** install the skills — Codex's plugin-install step is gated behind the desktop app GUI for now. Use `skill-installer` for the actual install.
 
 ## Plugins
 
